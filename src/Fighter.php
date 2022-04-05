@@ -16,6 +16,7 @@ class Fighter
     private string $image = 'fighter.svg';
     private int $x;
     private int $y;
+    protected float $range = 1;
 
     private int $life = self::MAX_LIFE;
 
@@ -163,5 +164,13 @@ class Fighter
         $this->y = $y;
 
         return $this;
+    }
+
+    /**
+     * Get the value of range
+     */ 
+    public function getRange(): float
+    {
+        return $this->range;
     }
 }

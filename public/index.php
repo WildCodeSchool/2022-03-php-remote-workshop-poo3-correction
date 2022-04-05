@@ -16,11 +16,14 @@ $bird2 = new Monster('Bird', 25, 12, 'bird.svg');
 $bird3 = new Monster('Bird', 25, 12, 'bird.svg');
 $heracles->setX(5)->setY(5);
 $bird1->setX(1)->setY(1);
-$bird2->setX(7)->setY(7);
+$bird2->setX(6)->setY(6);
 $bird3->setX(3)->setY(5);
 
 $sword = new Weapon();
 $heracles->setWeapon($sword);
+
+$bow = new Weapon(5, 8, 'bow.svg');
+$heracles->setWeapon($bow);
 
 $shield = new Shield();
 $heracles->setShield($shield);

@@ -62,4 +62,13 @@ class Hero extends Fighter
         }    
         return $defense;
     }
+
+    public function getRange(): float
+    {
+        $range = $this->range;
+        if ($this->getWeapon() !== null) {
+            $range = $this->range + $this->getWeapon()->getRange();
+        }
+        return $range;
+    }
 }

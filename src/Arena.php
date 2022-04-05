@@ -71,4 +71,19 @@ class Arena
 
         return $this;
     }
+
+    public function getDistance(Fighter $hero, Fighter $monster): float
+    {
+        return sqrt(($monster->getX() - $hero->getX()) ** 2 + ($monster->getY() - $hero->getY()) ** 2);
+    }
+
+    public function touchable(Fighter $hero, Fighter $monster)
+    {
+        // if ($this->getDistance($hero, $monster) <= $hero->getRange()) {
+        //     return true;
+        // } else {
+        //     return false;
+        // }
+        return $this->getDistance($hero, $monster) <= $hero->getRange();
+    }
 }
