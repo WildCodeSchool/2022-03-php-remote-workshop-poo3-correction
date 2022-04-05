@@ -14,6 +14,8 @@ class Fighter
     private int $strength;
     private int $dexterity;
     private string $image = 'fighter.svg';
+    private int $x;
+    private int $y;
 
     private int $life = self::MAX_LIFE;
 
@@ -121,5 +123,45 @@ class Fighter
     public function setDexterity($dexterity): void
     {
         $this->dexterity = $dexterity;
+    }
+
+    /**
+     * Get the value of x
+     */ 
+    public function getX()
+    {
+        return $this->x;
+    }
+
+    /**
+     * Set the value of x
+     *
+     * @return  self
+     */ 
+    public function setX($x)
+    {
+        $this->x = $x;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of y
+     */ 
+    public function getY()
+    {
+        return $this->y;
+    }
+
+    /**
+     * Set the value of y
+     *
+     * @return  self
+     */ 
+    public function setY($y)
+    {
+        $this->y = $y;
+
+        return $this;
     }
 }
